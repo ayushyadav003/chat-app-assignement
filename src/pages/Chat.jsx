@@ -1,8 +1,9 @@
 /* eslint-disable react-hooks/refs */
 /* eslint-disable react-hooks/purity */
-import { useEffect, useId, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { sendMessage, subscribeToMessages } from '../services/Socket'
 import ChatInput from '../components/chat/ChatInput'
+import ChatMessage from '../components/chat/ChatMessage'
 
 export default function Chat() {
   const [messages, setMessages] = useState([])
@@ -70,25 +71,7 @@ export default function Chat() {
         {messages?.length > 0 &&
           messages.map((msg) => {
             const isOwn = msg.sender === userId.current
-
-            console.log('user', userId.current)
-            return (
-              <div
-                className={`msg-bubble ${isOwn ? 'own-msg' : ''}`}
-                key={msg.id}
-              >
-                <div className="msg-info">
-                  <div className="msg-info-name">
-                    {isOwn ? 'You' : msg.sender}
-                  </div>
-                  <div className="msg-info-time">
-                    {new Date(msg.timestamp).toLocaleTimeString()}
-                  </div>
-                </div>
-
-                <div className="msg-text">{msg.content}</div>
-              </div>
-            )
+            return <ChatMessage msg={msg} isOwn={isOwn} />
           })}
 
         <div ref={messageEndRef} />

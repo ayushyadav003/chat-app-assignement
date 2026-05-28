@@ -1,16 +1,21 @@
-# React + Vite
+# Local Chat Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a frontend-based chat application. It allows you to chat across different browser tabs. 
 
-Currently, two official plugins are available:
+## How It Works
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **Tab Connections**: Each open tab acts as a unique user.
+* **Frontend Only**: The app currently runs entirely in the browser.
+* **Dummy Connection**: A dummy connection is included to show how it works.
+* **Future Updates**: A backend is needed to connect users across different computers globally.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## How to Run the App
 
-## Expanding the ESLint configuration
+Follow these steps to get the project running on your computer:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Install Dependencies**: Open your terminal and run `npm install`.
+2. **Start the App**: Run the command `npm run dev`.
+3. **Open the Chat**: Click the **Go to Chat** button on the screen.
+4. **Start Chatting**: You will be redirected to the `/chat` route.

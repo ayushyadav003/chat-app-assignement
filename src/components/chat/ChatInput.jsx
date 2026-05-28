@@ -1,6 +1,4 @@
-import React from 'react'
-
-function ChatInput({message, setMessage, handleSend, handleKeyDown}) {
+function ChatInput({ message, setMessage, handleSend, handleKeyDown }) {
   return (
     <div className="input-area">
       <input
